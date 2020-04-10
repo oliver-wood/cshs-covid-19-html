@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Nunito+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/styles/styles.css" type="text/css">
 
@@ -19,7 +20,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="globalNavbarNav">
-          <ul  class="navbar-nav">
+          <ul  class="navbar-nav ml-auto">
             <!-- Section navigation will be shunted here for small screens -->
             <li class="nav-item nav-item-section">
               <a class="nav-link" href="/">Intranet Link 1</a>
@@ -32,24 +33,38 @@
       </nav>
     </div>
 
-
     <header class="cov19-header">
       <div class="container">
-        <h1>Page Title</h1>
+        <div class="row align-items-center justify-content-between no-gutters py-4">
+          <div class="col-xs-12 col-sm-4">
+            <img src="assets/images/logo-covid.png">
+          </div>
+          <div class="col-xs-12 col-sm-8 text-sm-right pl-1">
+            <h1>COVID-19 <span>Resources</span></h1>
+          </div>
+        </div>
       </div>
     </header>
 
+    <section class="cov19-subheader">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1>Medical Staff</h1>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="container">
-      
-      <!-- Section Navigation -->
-      <nav id="cov19Nav" class="navbar navbar-expand d-none d-lg-block px-0">
+    <!-- Section Navigation -->
+    <nav id="cov19Nav" class="navbar navbar-expand d-none d-lg-block px-0">
+      <div class="container">
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul  class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="/">Covid-19 Home</a>
-            </li>
             <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item active">
               <a class="nav-link" href="/">Medical Staff</a>
             </li>
             <li class="nav-item">
@@ -75,14 +90,16 @@
             </li>
           </ul>
         </div>
-      </nav>
-
+      </div>
+    </nav>
+    
+    <div class="container">
       <div class="row mt-4">
         <div class="col-md-8">
         
           <section id="cov19Main">
             
-            <h2>Daily Medical Staff Update</h2>
+            <h2>Daily Update</h2>
             <!-- Can we add an inline snippet here? Or is that too much? -->
             <div class="card mb-4">
               <div class="row no-gutters">
@@ -194,14 +211,14 @@
         </div>
       </div>
     </div>
-    
+
     <footer>
       <div class="container">
-        &copy; Cedars Sinai Hospital
+          <p class="footer__disclaimer">
+            &copy; 2020 Cedars-Sinai. All Rights Reserved. A 501(c)(3) non-profit organization
+          </p>
       </div>
     </footer>
-
-    <div class="card mb-4"><div class="card-body"><h5 class="card-title"></h5></div></div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
