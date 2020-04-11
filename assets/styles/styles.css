@@ -137,6 +137,12 @@ h5.card-title {
   padding-top: 1rem;
   padding-bottom: 0.5rem;
 }
+.card .card-body p {
+  margin-bottom: 0.5rem;
+}
+.card .card-body p:last-child {
+  margin-bottom: 0.25rem;
+}
 .card .list-group .list-group-item {
   border: 0px none;
   padding-top: 0.25rem;
@@ -144,6 +150,9 @@ h5.card-title {
 }
 .card .list-group .list-group-item:last-child {
   padding-bottom: 0.5rem;
+}
+.card .card-video {
+  position: relative;
 }
 
 @media (min-width: 992px) {
@@ -193,4 +202,75 @@ a:hover {
   bottom: 20px; /* Place the button at the bottom of the page */
   right: 30px; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
+}
+
+.modal-video-launch .vid-modal-play-icon {
+  position: absolute;
+  top: calc(50% - 40px);
+  left: calc(50% - 40px);
+  -webkit-transition: background-color .4s;
+  transition: background-color .4s;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,.45);
+  width: 60px;
+  height: 60px;
+}
+.modal-video-launch .vid-modal-play-icon::after {
+  position: absolute;
+  top: calc(50% - 12px);
+  left: calc(50% - 6px);
+  border: 0 solid transparent;
+  border-left: 20px solid #fff;
+  border-top-width: 12px;
+  border-bottom-width: 12px;
+  width: 0;
+  height: 0;
+  content: "";
+}
+body:not(.is-touch) .modal-video-launch:hover .vid-modal-play-icon {
+  background-color: #DE7334;
+}
+.modal-video .cs-figure {
+  margin: 0 auto 15px;
+}
+.modal-video .cs-figure {
+  display: block;
+}
+
+.fig-video {
+    position: relative;
+    border-radius: 7px;
+    padding: 0 0 56.25%;
+    width: 100%;
+    max-width: 100%;
+    height: 0;
+    overflow: hidden;
+}
+
+.modal-video .cs-figure .fig-video {
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-video .cs-figure .fig-video {
+      margin-bottom: 40px;
+  }
+}
+
+.fig-video .video-js, .fig-video embed, .fig-video iframe, .fig-video object, .fig-video video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-js.vjs-quality-menu {
+  display: block;
+}
+
+.video-js[tabindex="-1"] {
+  outline: 0;
 }
