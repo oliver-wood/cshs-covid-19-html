@@ -20,8 +20,6 @@ header {
   color: #fff;
 }
 
-
-
 .cov19-header h1 {
   font-size: 2rem;
   margin-top: 0.5rem
@@ -88,6 +86,27 @@ footer {
   border-top: 1px solid lightgray;
 }
 
+h5.card-title {
+  margin-bottom: 0rem;
+}
+
+.card-title+.card-text {
+  margin-top: 0.5rem;
+}
+
+.card .card-body {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+.card .list-group .list-group-item {
+  border: 0px none;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.card .list-group .list-group-item:last-child {
+  padding-bottom: 0.5rem;
+}
+
 @media (min-width: 992px) {
   .nav-item-section {
     border: 0 none;
@@ -102,6 +121,13 @@ footer {
 .navbar-nav .nav-item.active .nav-link,
 .navbar-nav .nav-item:hover .nav-link {
   color: #f78d2a;
+}
+
+a {
+  color: #8666AC;
+}
+a:hover {
+  color: #715591;
 }
 
 .btn-primary {
