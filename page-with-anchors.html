@@ -251,6 +251,9 @@
       
       var $anchorList = $($.parseHTML('<ul class="list-group list-group-flush">'));
 
+      if(!$('#cov19Main h2').length) { // if no h2's then exit
+        return;
+      }
       var ctr = 1;
       $cov19Main.find('h2').each(function() {
 
