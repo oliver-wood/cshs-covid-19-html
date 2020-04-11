@@ -29,15 +29,20 @@ h3 {
   margin-bottom: 60px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 576px) {
   .navbar-burger-container {
     margin-bottom: 0;
   }
   #globalNavbarNav {
-    margin-top: 0;
     margin-bottom: 0;
   }
 }
+@media (min-width: 992px) {
+  #globalNavbarNav {
+    margin-top: 0;
+  }
+}
+
 .navbar-burger-container .navbar {
   z-index:99;
 }
