@@ -3,7 +3,7 @@ html, body {
 }
 
 h1 > span {
-  color: #f78d2a;
+  color: #FF7F30;
 }
 
 h2, h3, h4, h5 {
@@ -19,8 +19,6 @@ header {
   background-color: #8666AC;
   color: #fff;
 }
-
-
 
 .cov19-header h1 {
   font-size: 2rem;
@@ -88,6 +86,27 @@ footer {
   border-top: 1px solid lightgray;
 }
 
+h5.card-title {
+  margin-bottom: 0rem;
+}
+
+.card-title+.card-text {
+  margin-top: 0.5rem;
+}
+
+.card .card-body {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+.card .list-group .list-group-item {
+  border: 0px none;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.card .list-group .list-group-item:last-child {
+  padding-bottom: 0.5rem;
+}
+
 @media (min-width: 992px) {
   .nav-item-section {
     border: 0 none;
@@ -104,6 +123,13 @@ footer {
   color: #f78d2a;
 }
 
+a {
+  color: #8666AC;
+}
+a:hover {
+  color: #715591;
+}
+
 .btn-primary {
   background-color: #8666AC;
   border-color: #8666AC;
@@ -111,4 +137,21 @@ footer {
 .btn-primary:hover {
   background-color: #715591;
   border-color: #715591
+}
+
+.btn-secondary {
+  background-color: #FF7F30;
+  border-color: #FF7F30;
+}
+.btn-secondary:hover {
+  background-color: #DE7334;
+  border-color: #DE7334
+}
+
+#topBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
 }

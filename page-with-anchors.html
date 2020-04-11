@@ -60,38 +60,39 @@
     <nav id="cov19Nav" class="navbar navbar-expand d-none d-lg-block px-0">
       <div class="container">
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul  class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="/">Home</a>
+          <ul  class="navbar-nav d-table">
+            <li class="nav-item d-table-cell align-middle active">
+              <a class="nav-link" href="/">Covid-19</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item d-table-cell align-middle">
               <a class="nav-link" href="/">Medical Staff</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="/">Surgeons</a>
-            </li>
-            <li class="nav-item">
+            </li> -->
+            <li class="nav-item d-table-cell align-middle">
               <a class="nav-link" href="/">Ambulatory Setting</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="/">Medical Network</a>
-            </li>
-            <li class="nav-item">
+            </li> -->
+            <li class="nav-item d-table-cell align-middle">
               <a class="nav-link" href="/">Nurses and Clinical Support Staff</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item d-table-cell align-middle">
               <a class="nav-link" href="/">Employee Resources</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item d-table-cell align-middle">
               <a class="nav-link" href="/">Video Gallery</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/">FAQ</a>
+            <li class="nav-item d-table-cell align-middle">
+              <a class="nav-link " href="/">FAQ</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+    <!-- /Section Navigation -->
     
     <div class="container">
       <div class="row mt-4">
@@ -220,6 +221,8 @@
       </div>
     </footer>
 
+    <a id="topBtn" class="btn btn-secondary" href="#">Top</a>
+    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -229,11 +232,16 @@
     $(function() {
       shuntNavigation();
       generateContentAnchors();
+
+      $(window).scroll(function() {
+        showHideTopBtn()
+      });
     });
 
     function shuntNavigation() {
       var $navlist = $('#cov19Nav ul').clone();
-      $navlist.children('li').addClass('d-lg-none');
+      $navlist.removeClass('d-table');
+      $navlist.children('li').addClass('d-lg-none').removeClass('d-table-cell');
       $('#globalNavbarNav ul').prepend($navlist);
     }
 
@@ -271,7 +279,11 @@
 
       $anchorBoxSide.addClass('d-none d-lg-block');
       $cov19Sidebar.prepend($anchorBoxSide);
+    }
 
+    function showHideTopBtn() {
+      $topBtn = $('#topBtn');
+      $topBtn.toggle($(window).scrollTop() > 100);
     }
 
 
