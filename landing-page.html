@@ -285,6 +285,10 @@
       $(window).scroll(function() {
         showHideTopBtn()
       });
+
+      $('.modal-video').on('hidden.bs.modal', function() {
+        stopAllVideos();
+      });
     });
 
     function shuntNavigation() {
@@ -296,6 +300,13 @@
     function showHideTopBtn() {
       $topBtn = $('#topBtn');
       $topBtn.toggle($(window).scrollTop() > 100);
+    }
+
+    function stopAllVideos() {
+      for (x = 0; x < Object.keys(videojs.players).length; x++) {
+          var setPlayer = Object.keys(videojs.players)[x];
+          videojs.getPlayer(setPlayer).pause();
+        }
     }
     </script>
   </body>

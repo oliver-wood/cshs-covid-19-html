@@ -236,6 +236,10 @@
       $(window).scroll(function() {
         showHideTopBtn()
       });
+
+      $('.modal-video').on('hidden.bs.modal', function() {
+        stopAllVideos();
+      });
     });
 
     function shuntNavigation() {
@@ -247,13 +251,15 @@
 
     function generateContentAnchors() {
       var $cov19Main = $('#cov19Main');
-      var $cov19Sidebar = $('#cov19Sidebar');
-      
-      var $anchorList = $($.parseHTML('<ul class="list-group list-group-flush">'));
 
       if(!$('#cov19Main h2').length) { // if no h2's then exit
         return;
       }
+      
+      var $cov19Sidebar = $('#cov19Sidebar');
+      
+      var $anchorList = $($.parseHTML('<ul class="list-group list-group-flush">'));
+
       var ctr = 1;
       $cov19Main.find('h2').each(function() {
 
@@ -289,7 +295,12 @@
       $topBtn.toggle($(window).scrollTop() > 100);
     }
 
-
+    function stopAllVideos() {
+      for (x = 0; x < Object.keys(videojs.players).length; x++) {
+          var setPlayer = Object.keys(videojs.players)[x];
+          videojs.getPlayer(setPlayer).pause();
+        }
+    }
     </script>
   </body>
 </html>
