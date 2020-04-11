@@ -12,7 +12,41 @@ h2, h3, h4, h5 {
 }
 
 h2 {
+  color: #FF7F30;
+  margin-top: 2rem;
+  font-size: 1.75rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
 
+.navbar-burger-container {
+  margin-bottom: -65px;
+}
+
+#globalNavbarNav {
+  margin-top: -35px;
+  margin-bottom: 60px;
+}
+
+@media (min-width: 992px) {
+  .navbar-burger-container {
+    margin-bottom: 0;
+  }
+  #globalNavbarNav {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+.navbar-burger-container .navbar {
+  z-index:99;
+}
+.navbar-toggler {
+  z-index:99;
+}
+
+.navbar-light .navbar-toggler {
+  border:0px none;
 }
 
 header {
@@ -21,7 +55,7 @@ header {
 }
 
 .cov19-header h1 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   margin-top: 0.5rem
 }
 
