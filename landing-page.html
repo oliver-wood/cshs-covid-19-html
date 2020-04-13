@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Nunito+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Nunito+Sans@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/styles/styles.css" type="text/css">
 
@@ -34,7 +34,7 @@
 
     <header class="cov19-header">
       <div class="container">
-        <div class="row align-items-center justify-content-between no-gutters py-4">
+        <div class="row align-items-center justify-content-between no-gutters pt-4 pb-sm-4">
           <div class="col-xs-12 col-sm-4">
             <img src="assets/images/cs-logo@2x.png">
           </div>
@@ -45,7 +45,7 @@
       </div>
     </header>
 
-    <section class="cov19-subheader">
+    <section class="cov19-subheader d-lg-none">
       <div class="container">
         <div class="row">
           <div class="col">
@@ -56,35 +56,35 @@
     </section>
 
     <!-- Section Navigation -->
-    <nav id="cov19Nav" class="navbar navbar-expand d-none d-lg-block px-0">
+    <nav id="cov19Nav" class="navbar navbar-expand d-none d-lg-block px-0 py-0">
       <div class="container">
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul  class="navbar-nav d-table">
-            <li class="nav-item d-table-cell align-middle active">
+          <ul  class="navbar-nav d-table h-100">
+            <li class="nav-item align-middle d-table-cell active w-15">
               <a class="nav-link" href="/">Covid-19</a>
             </li>
-            <li class="nav-item d-table-cell align-middle">
+            <li class="nav-item align-middle d-table-cell w-15">
               <a class="nav-link" href="/">Medical Staff</a>
             </li>
             <!-- <li class="nav-item">
               <a class="nav-link" href="/">Surgeons</a>
             </li> -->
-            <li class="nav-item d-table-cell align-middle">
+            <li class="nav-item align-middle d-table-cell w-15">
               <a class="nav-link" href="/">Ambulatory Setting</a>
             </li>
             <!-- <li class="nav-item">
               <a class="nav-link" href="/">Medical Network</a>
             </li> -->
-            <li class="nav-item d-table-cell align-middle">
+            <li class="nav-item align-middle d-table-cell w-15">
               <a class="nav-link" href="/">Nurses and Clinical Support Staff</a>
             </li>
-            <li class="nav-item d-table-cell align-middle">
+            <li class="nav-item align-middle d-table-cell w-15">
               <a class="nav-link" href="/">Employee Resources</a>
             </li>
-            <li class="nav-item d-table-cell align-middle">
+            <li class="nav-item align-middle d-table-cell w-15">
               <a class="nav-link" href="/">Video Gallery</a>
             </li>
-            <li class="nav-item d-table-cell align-middle">
+            <li class="nav-item align-middle d-table-cell w-15">
               <a class="nav-link " href="/">FAQ</a>
             </li>
           </ul>
@@ -282,6 +282,7 @@
 
     $(function() {
       shuntNavigation();
+      fixNavWidths();
 
       $(window).scroll(function() {
         showHideTopBtn()
@@ -294,8 +295,14 @@
 
     function shuntNavigation() {
       var $navlist = $('#cov19Nav ul').clone();
-      $navlist.children('li').addClass('d-lg-none').removeClass('d-table-cell');
+      $navlist.children('li').addClass('d-lg-none').removeClass('d-table-cell').removeClass('w-15');
       $('#globalNavbarNav ul').prepend($navlist.children('li'));
+    }
+
+    function fixNavWidths() {
+      var $navlist = $('#cov19Nav ul');
+      var colWidth = 100.0 / $navlist.children('li').length;
+      $navlist.children('li').css('width',`${colWidth}%`);
     }
 
     function showHideTopBtn() {
