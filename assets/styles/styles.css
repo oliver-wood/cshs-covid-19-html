@@ -55,7 +55,7 @@ h3 {
 }
 
 header {
-  background-color: #8666AC;
+  background-color: #715591;
   color: #fff;
 }
 
@@ -80,14 +80,13 @@ header {
 }
 
 .cov19-subheader {
-  background-color: #715591;
-  color: #fff;
+  color: #715591;
 }
 .cov19-subheader h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 2rem;
-  margin-top: 0.5rem
+  margin-top: 0.75rem
 }
 
 footer {
