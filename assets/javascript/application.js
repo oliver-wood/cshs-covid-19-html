@@ -24,7 +24,7 @@ function shuntNavigation() {
 function fixNavWidths() {
   var $navlist = $('#cov19Nav ul');
   var colWidth = 100.0 / $navlist.children('li').length;
-  $navlist.children('li').css('width',`${colWidth}%`);
+  $navlist.children('li').css('width',colWidth+'%');
 }
 
 function generateContentAnchors() {
@@ -44,7 +44,7 @@ function generateContentAnchors() {
     $(this).attr('id', h2id);
 
     var $link = $($.parseHTML('<a>'));
-    $link.attr('href', `#${h2id}`);
+    $link.attr('href', '#' + h2id);
     $link.text(h2Text);
 
     var $listItem = $($.parseHTML('<li class="list-group-item">'));

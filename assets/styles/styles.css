@@ -1,3 +1,6 @@
+* {
+  min-height: 0.01px;
+}
 html, body {
   font-family: 'Nunito Sans', sans-serif;
 }
@@ -277,4 +280,8 @@ body:not(.is-touch) .modal-video-launch:hover .vid-modal-play-icon {
 
 .video-js[tabindex="-1"] {
   outline: 0;
+}
+
+* {
+  min-height: 0.01px;
 }
