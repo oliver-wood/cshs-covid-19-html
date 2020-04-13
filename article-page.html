@@ -83,168 +83,99 @@
     </nav>
     <!-- /Section Navigation -->
 
-    <section class="cov19-subheader d-lg-none">
+    <section class="cov19-subheader"><!-- d-lg-none class removed on article pages -->
       <div class="container">
         <div class="row">
           <div class="col">
-            <h1>Page Title</h1>
+            <h1>Article Page Title</h1>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="container mt-4 mt-lg-5">
+    <div class="container mt-4"><!-- mt-lg-5 class removed on article pages where h1 always shows-->
       <div class="row mt-4">
         <div class="col-md-8">
-        
-          <section class="cov19-main">
 
-            <div class="card mb-4">
-              <div class="row no-gutters">
-                <div class="d-none d-md-block col-md-4 col-lg-3">
-                  <img src="https://via.placeholder.com/400x400" class="card-img" alt="...">
-                </div>
-                <div class="col-md-8 col-lg-9">
-                  <div class="card-body">
-                    <h5 class="card-title">Message Title</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu orci eu ex imperdiet ullamcorper. Nunc ultricies elementum orci, id fermentum eros fringilla vel.</p>
-                    <a href="#" class="btn btn-primary">Read more</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <section id="cov19Main">
+            <!-- Ideally we would set this class in a template, but it may not be possible 
+              and we might need to do some jquery nonsense -->
+              <h2 class="mt-0">Daily Update</h2>
 
-            <div class="card mb-4">
-              <div class="row no-gutters">
-                <div class="d-none d-md-block col-md-4 col-lg-3">
-                  <img src="https://via.placeholder.com/400x400" class="card-img" alt="...">
-                </div>
-                <div class="col-md-8 col-lg-9">
-                  <div class="card-body">
-                    <h5 class="card-title">Message Title</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu orci eu ex imperdiet ullamcorper. Nunc ultricies elementum orci, id fermentum eros fringilla vel.</p>
-                    <a href="#" class="btn btn-primary">Read more</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-                  
-            <div class="card-video">
-              <div class="videoModal">  
-                <div class="callToAction">
-
-                  <div class="card mb-4">
-                    <div class="row no-gutters">
-                      <div class="d-none d-md-block col-md-4 col-lg-3">
-                        <a class="modal-video-launch js-modal-video-trigger" data-toggle="modal" href="#video-main-123456">
-                          <!-- We would need an image slot on the web video content type to support this -->
-                          <img class="card-img" src="/assets/images/special-ceo-message.jpg"/>    
-                        </a>
-                      </div>
-                      <div class="col-md-8 col-lg-9">
-                        <div class="card-body">
-                          <h5 class="card-title">Special CEO Message</h5>
-                          <p>Thomas M. Priselac, president and CEO, talks about Cedars-Sinai's role in the COVID-19 pandemic.
-                          </p>
-                          <a class="modal-video-launch js-modal-video-trigger btn btn-primary" data-toggle="modal" href="#video-main-123456">
-                            Play video
-                          </a>
-                        </div>
-                      </div>
+              <!-- Can we add an inline snippet here? Or is that too much? -->
+              <div class="card mb-4">
+                <div class="row no-gutters">
+                  <div class="col-md-12">
+                    <div class="card-body">
+                      <h5 class="card-title">Message Title</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu orci eu ex imperdiet ullamcorper. Nunc ultricies elementum orci, id fermentum eros fringilla vel.</p>
+                      <a href="#" class="btn btn-primary">Read more</a>
                     </div>
                   </div>
                 </div>
-                <div id="video-main-123456" class="modal fade modal-video js-modal-video" tabindex="-1" role="dialog">
-                  <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title">Special CEO Message</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <figure class="cs-figure">
-                          <div class="fig-video">
-                            <!-- This is the code snippet that should come from the content item -->
-                            <video class="video-js" data-video-id="6142424250001" data-account="5588818555001" data-player="HkkyQg5UM" data-embed="default" data-application-id controls></video>
-                            <script src="//players.brightcove.net/5588818555001/HkkyQg5UM_default/index.min.js"></script>
-                            <!-- /code snippet -->
-                          </div>
-                          <div class="fig-lead"></div>
-                          <div class="fig-title"></div>
-                          <figcaption></figcaption>
-                        </figure>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              </div>      
+                
+              <h2>Latest COVID-19 Census Numbers</h2>
+              <ul>
+                <li><a href="#">Link to resource</a></li>
+                <li><a href="#">Link to resource</a></li>
+              </ul>
+                
+              <h2>Important Contact Information</h2>
+              <address>
+                1355 Market St, Suite 900<br>
+                San Francisco, CA 94103<br>
+                P: (123) 456-7890
+              </address>
+                
+              <h2>COVID-19 WebEx Meetings</h2>
+                Free Text Section w/ meeting information<br>
+                Links to view previous webex meetings (Via Brightcove)
+                
+              <h2>Resources</h2>
+              
+              <h3>Best Practice Guidelines</h3>
+              <ul>
+                <li><a href="#">Link to resource</a></li>
+                <li><a href="#">Link to resource</a></li>
+                <li><a href="#">Link to resource</a></li>
+                <li><a href="#">Link to resource</a></li>
+                <li><a href="#">Link to resource</a></li>
+                <li><a href="#">Link to resource</a></li>
+              </ul>
+  
+              <h3>Elective Surgery Postponement</h3>
+              <ul>
+                <li><a href="#">Link to resource</a></li>
+                <li><a href="#">Link to resource</a></li>
+                <li><a href="#">Link to resource</a></li>
+                <li><a href="#">Link to resource</a></li>
+                <li><a href="#">Link to resource</a></li>
+                <li><a href="#">Link to resource</a></li>
+              </ul>
+              
+              <h2>Recent Messages</h2>
+              <ul>
+                <li><a href="#">Link to message</a></li>
+                <li><a href="#">Link to message</a></li>
+                <li><a href="#">Link to message</a></li>
+                <li><a href="#">Link to message</a></li>
+                <li><a href="#">Link to message</a></li>
+              </ul>
+              <div class="alert alert-warning" role="alert">
+                Please note: Due to the evolving nature of the COVID-19 pandemic, some 
+                recent messages may now be outdated. Refer to the latest medical staff 
+                update for the most recent information, or visit CS-Link's "Web Activities"
+                and select the "COVID-19 Resources" folder to access links to the latest federal, 
+                state and local resources.
               </div>
-            </div>
-
-            <h2>Latest COVID-19 Census Numbers</h2>
-            <ul>
-              <li><a href="#">Link to resource</a></li>
-              <li><a href="#">Link to resource</a></li>
-            </ul>
-              
-            <h2>Important Contact Information</h2>
-            <address>
-              1355 Market St, Suite 900<br>
-              San Francisco, CA 94103<br>
-              P: (123) 456-7890
-            </address>
-              
-            <h2>COVID-19 WebEx Meetings</h2>
-              Free Text Section w/ meeting information<br>
-              Links to view previous webex meetings (Via Brightcove)
-              
-            <h2>Resources</h2>
-            
-            <h3>Best Practice Guidelines</h3>
-            <ul>
-              <li><a href="#">Link to resource</a></li>
-              <li><a href="#">Link to resource</a></li>
-              <li><a href="#">Link to resource</a></li>
-              <li><a href="#">Link to resource</a></li>
-              <li><a href="#">Link to resource</a></li>
-              <li><a href="#">Link to resource</a></li>
-            </ul>
-
-            <h3>Elective Surgery Postponement</h3>
-            <ul>
-              <li><a href="#">Link to resource</a></li>
-              <li><a href="#">Link to resource</a></li>
-              <li><a href="#">Link to resource</a></li>
-              <li><a href="#">Link to resource</a></li>
-              <li><a href="#">Link to resource</a></li>
-              <li><a href="#">Link to resource</a></li>
-            </ul>
-            
-            <h2>Recent Messages</h2>
-            <ul>
-              <li><a href="#">Link to message</a></li>
-              <li><a href="#">Link to message</a></li>
-              <li><a href="#">Link to message</a></li>
-              <li><a href="#">Link to message</a></li>
-              <li><a href="#">Link to message</a></li>
-            </ul>
-            
-            <div class="alert alert-warning" role="alert">
-              Please note: Due to the evolving nature of the COVID-19 pandemic, some 
-              recent messages may now be outdated. Refer to the latest medical staff 
-              update for the most recent information, or visit CS-Link's "Web Activities"
-              and select the "COVID-19 Resources" folder to access links to the latest federal, 
-              state and local resources.
-            </div>
-
           </section>
 
         </div>
 
         <div class="col-md-4">
           
-          <section class="cov19-sidebar sticky-top">
+          <section id="cov19Sidebar" class="sticky-top">
 
               <div class="card mb-4">
                 <div class="card-body">

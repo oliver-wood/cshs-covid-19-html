@@ -86,7 +86,7 @@ header {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 2rem;
-  margin-top: 0.75rem
+  margin-top: 1.75rem;
 }
 
 footer {
@@ -99,7 +99,7 @@ footer {
 
 #cov19Nav {
   background-color: #D1C7E3;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
 }
 
 #cov19Nav .navbar-nav .nav-item {
