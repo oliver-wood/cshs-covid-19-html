@@ -37,14 +37,14 @@ function generateContentAnchors() {
 
   var ctr = 1;
   $cov19Main.find('h2').each(function() {
-
-    var h2id = `anchor${ctr}`;
+    var h2Text = $(this).text();
+    var h2id = h2Text.replace(/[\W_]+/g,"");
 
     $(this).attr('id', h2id);
 
     var $link = $($.parseHTML('<a>'));
     $link.attr('href', `#${h2id}`);
-    $link.text($(this).text());
+    $link.text(h2Text);
 
     var $listItem = $($.parseHTML('<li class="list-group-item">'));
     $listItem.append($link);
