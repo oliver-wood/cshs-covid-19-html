@@ -7,7 +7,9 @@ $(function() {
     showHideTopBtn()
   });	  
 
-$('.modal-video').on('hidden.bs.modal', function() {
+  shiftModalsUnderFooter();
+  
+  $('.modal-video').on('hidden.bs.modal', function() {
     stopAllVideos();
   });	
 });
@@ -73,4 +75,10 @@ function stopAllVideos() {
       var setPlayer = Object.keys(videojs.players)[x];
       videojs.getPlayer(setPlayer).pause();
     }
+}
+
+function shiftModalsUnderFooter() {
+  $('.modal').each(function() {
+    $(this).insertAfter($('footer'));
+  });
 }
