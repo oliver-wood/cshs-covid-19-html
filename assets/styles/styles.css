@@ -99,7 +99,7 @@ footer {
 
 #cov19Nav {
   background-color: #D1C7E3;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 #cov19Nav .navbar-nav .nav-item {
@@ -170,6 +170,9 @@ h5.card-title {
 .navbar-nav .nav-item.active .nav-link,
 .navbar-nav .nav-item:hover .nav-link {
   color: #f78d2a;
+}
+.navbar-nav .nav-item.active {
+  background-color: #fff;
 }
 
 a {
