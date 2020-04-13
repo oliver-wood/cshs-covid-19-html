@@ -66,6 +66,7 @@ header {
 
 .cov19-header img {
   width: 180px;
+  margin-left: -15px;
 }
 
 @media (min-width: 992px) {
