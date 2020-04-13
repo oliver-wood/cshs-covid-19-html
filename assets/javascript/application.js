@@ -35,7 +35,6 @@ function generateContentAnchors() {
     return;
   }
 
-  var ctr = 1;
   $cov19Main.find('h2').each(function() {
     var h2Text = $(this).text();
     var h2id = h2Text.replace(/[\W_]+/g,"");
@@ -50,7 +49,6 @@ function generateContentAnchors() {
     $listItem.append($link);
 
     $anchorList.append($listItem);
-    ctr++;
   })
 
   var $anchorBox = $($.parseHTML('<div class="card mb-4"><div class="card-body"><h5 class="card-title">Page Links</h5></div></div>'));
