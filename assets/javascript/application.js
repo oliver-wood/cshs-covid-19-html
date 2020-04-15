@@ -53,7 +53,7 @@ function generateContentAnchors() {
     $anchorList.append($listItem);
   })
 
-  var $anchorBox = $($.parseHTML('<div class="card mb-4"><div class="card-body"><h5 class="card-title">Page Links</h5></div></div>'));
+  var $anchorBox = $($.parseHTML('<div class="card mb-4" id="cov19PageLinks"><div class="card-body"><h5 class="card-title">Page Links</h5></div></div>'));
   $anchorBox.append($anchorList);  
   
   var $anchorBoxSide = $anchorBox.clone();
