@@ -142,6 +142,11 @@ footer {
   border: 0;
 }
 
+#cov19Main .col-md-12 .card-body {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 #cov19Main .card-body {
   padding-top: 0;
 }
