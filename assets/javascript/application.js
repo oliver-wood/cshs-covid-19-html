@@ -37,6 +37,12 @@ function generateContentAnchors() {
     return;
   }
 
+  // check if there's a comment anywhere in the body of the page that says "<!-- [DISABLE PAGE LINKS] -->"
+  var mainContentBlock = jQuery('body').html();
+  if (mainContentBlock.match(/<!-- \[[Dd][Ii][Ss][Aa][Bb][Ll][Ee] [Pp][Aa][Gg][Ee] [Ll][Ii][Nn][Kk][Ss]\] -->/g)) {
+    return;
+  }
+
   $cov19Main.find('h2').each(function() {
     var h2Text = $(this).text();
     var h2id = h2Text.replace(/[\W_]+/g,"");
